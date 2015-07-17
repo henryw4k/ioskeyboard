@@ -124,7 +124,18 @@
 		 //        window.scrollTo(0, 0);
 		 //        document.body.scrollTop = 0;
 		 //    }
+
+
+		 	var iframe = document.createElement('iframe');
+			var html = '<body><input type="text" name="texting"></body>';
+			iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+			document.body.appendChild(iframe);
+			console.log('iframe.contentWindow =', iframe.contentWindow);
+
 		</script>
+				
+				
+
     </head>
     <body>
         <div id="header"><h1>Some Cool Landing Page</h1></div>
@@ -135,6 +146,7 @@
 				<li><a href="#" id="premium">Premium</a></li>
 				<li><a href="#" id="collegeAccel">College Accelerator</a></li>
 				<li><a href="#" id="teacher">Teacher</a></li>
+
 			</ul>
 
 		</div>
